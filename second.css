@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.next-page-hitarea {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.second-page-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.second-image-shell {
+  z-index: 1;
+  width: min(100vw, 133.333vh);
+  aspect-ratio: 4 / 3;
+  pointer-events: auto;
+}
+
+.second-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.heart-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  left: var(--heart-x);
+  top: var(--heart-y);
+  color: #e01838;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+  font-size: var(--heart-size);
+  line-height: 1;
+  opacity: var(--heart-opacity);
+  animation: heart-float var(--heart-duration) ease-in-out infinite;
+  animation-delay: var(--heart-delay);
+  text-shadow: 0 2px 5px rgba(190, 16, 53, 0.2);
+}
+
+@keyframes heart-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-8deg) scale(0.9);
+  }
+
+  50% {
+    transform: translate3d(var(--heart-drift), -18px, 0) rotate(8deg) scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heart {
+    animation: none;
+  }
+}
+.back-link {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 3;
+  padding: 8px 15px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  color: #a14b6d;
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 5px 14px rgba(138, 69, 100, 0.2);
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.back-link:hover {
+  transform: scale(1.05);
+  background: #ffffff;
+}
+
+.back-link:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}

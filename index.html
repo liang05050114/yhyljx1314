@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我们在一起已经</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cute-nav.css">
+</head>
+<body>
+  <div id="stars" class="stars" aria-hidden="true"></div>
+  <div id="love-layer" class="love-layer" aria-hidden="true"></div>
+  <button class="disc-button" id="disc-button" type="button" aria-label="播放音乐" title="播放音乐" aria-pressed="false">
+    <img src="assets/disc-button.webp" alt="">
+  </button>
+  <audio id="bg-music" src="assets/music.mp3" preload="auto" loop aria-hidden="true"></audio>
+  <main>
+    <h1>我们在一起已经</h1>
+    <p class="days"><span id="days-count">317</span><span class="unit">天</span></p>
+    <a class="couple-link" href="second.html" aria-label="进入第二页">
+      <img class="couple" id="couple-image" src="assets/couple.webp" alt="两只小熊相拥">
+    </a>
+    <p class="names" id="names">梁佳欣&amp;杨皓焱</p>
+  </main>
+  <button class="love-corner-button" id="love-corner-button" type="button" aria-label="进入旋转木马" title="进入旋转木马">
+    <img src="assets/love-heart.webp" alt="">
+  </button>
+  <button class="next-corner-button cute-next-arrow" id="next-corner-button" type="button" aria-label="回答一个问题" aria-haspopup="dialog" aria-controls="choice-modal">
+    <svg viewBox="0 0 32 30" aria-hidden="true" focusable="false">
+  <path class="heart-shape" d="M16 27.5C13.7 25.4 2 18.1 2 10.4 2 5.8 5.7 2 10.4 2c2.5 0 4.6 1.3 5.6 3.3C17 3.3 19.1 2 21.6 2 26.3 2 30 5.8 30 10.4c0 7.7-11.7 15-14 17.1z"></path>
+</svg>
+    </button>
+  <div class="choice-modal" id="choice-modal" hidden>
+    <div class="choice-dialog" role="dialog" aria-modal="true" aria-labelledby="choice-question">
+      <div class="choice-question-row">
+        <img class="choice-sticker" src="emotion_download_1794759835195(1).gif" alt="" aria-hidden="true">
+        <p class="choice-question" id="choice-question">宝宝是不是最爱我啦？</p>
+      </div>
+      <div class="choice-actions">
+        <a class="choice-button choice-yes" id="choice-yes" href="envelope.html">是</a>
+        <button class="choice-button choice-no" id="choice-no" type="button">不是</button>
+      </div>
+    </div>
+  </div>
+  <noscript>
+    <p>请启用 JavaScript 以显示动态天数。</p>
+  </noscript>
+  <script src="script.js"></script>
+</body>
+</html>

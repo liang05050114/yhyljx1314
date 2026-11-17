@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>一二布布的小视频</title>
+  <link rel="stylesheet" href="video-font.css">
+  <link rel="stylesheet" href="video.css">
+</head>
+<body>
+  <a class="video-back" href="envelope.html" aria-label="返回信封页">返回</a>
+  <main class="video-page">
+    <section class="video-card" aria-label="一二布布的小视频">
+      <p class="video-caption">我们永远都不会忘记的那天</p>
+      <div class="video-frame">
+        <video
+          id="bubu-video"
+          controls
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/video/bubu-poster.webp"
+        >
+          <source src="assets/video/bubu-web.mp4" type="video/mp4">
+          你的浏览器不支持网页视频播放。
+        </video>
+      </div>
+
+    </section>
+  </main>
+  <script src="video.js"></script>
+</body>
+</html>
